@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+:root {
+  --bg-paper: #fafaf8;
+  --bg-card: #ffffff;
+  --bg-tag: #1a1a1a;
+  --text-primary: #0a0a0a;
+  --text-secondary: #4a4a4a;
+  --text-tertiary: #8a8a8a;
+  --border-hairline: #d4d4d4;
+  --border-medium: #a0a0a0;
+  --accent-primary: #2a2a2a;
+}
+
+@theme inline {
+  --color-background: var(--bg-paper);
+  --color-foreground: var(--text-primary);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--bg-paper);
+  color: var(--text-primary);
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: 15px;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+
+  /* Paper texture noise */
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 1px, rgba(0,0,0,0.008) 1px, rgba(0,0,0,0.008) 2px),
+    repeating-linear-gradient(90deg, transparent, transparent 1px, rgba(0,0,0,0.008) 1px, rgba(0,0,0,0.008) 2px);
+}
+
+/* Section tag headers */
+.section-tag {
+  display: inline-block;
+  background: var(--bg-tag);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 2px;
+}
+
+/* Hairline borders */
+.hairline {
+  border: 0.5px solid var(--border-hairline);
+}
+
+/* Card component */
+.card {
+  background: var(--bg-card);
+  border: 0.5px solid var(--border-hairline);
+  border-radius: 4px;
+  padding: 20px;
+}
+
+/* Button styles */
+.btn-primary {
+  background: var(--accent-primary);
+  color: #ffffff;
+  border: 0.5px solid var(--accent-primary);
+  padding: 12px 20px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-primary:hover {
+  background: #3a3a3a;
+  border-color: #3a3a3a;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text-primary);
+  border: 0.5px solid var(--border-medium);
+  padding: 10px 18px;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-outline:hover {
+  border-color: var(--text-primary);
+  background: rgba(0,0,0,0.02);
+}
+
+/* Input styles */
+input[type="text"],
+input[type="url"],
+select,
+textarea {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border: 0.5px solid var(--border-hairline);
+  padding: 12px 14px;
+  border-radius: 3px;
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: 14px;
+  width: 100%;
+  transition: border-color 0.15s ease;
+}
+
+select {
+  cursor: pointer;
+  appearance: none;
+  background-color: var(--bg-card);
+  background-image: url("data:image/svg+xml,%3Csvg width='8' height='5' viewBox='0 0 8 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L4 4L7 1' stroke='%230a0a0a' stroke-width='1' stroke-linecap='square'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 40px;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+select option {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  padding: 8px;
+}
+
+select option:disabled {
+  color: var(--text-tertiary);
+  background: var(--bg-paper);
+}
+
+input[type="text"]:focus,
+input[type="url"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--border-medium);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
