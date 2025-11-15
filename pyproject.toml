@@ -1,0 +1,21 @@
+[project]
+name = "automatic-tool-creator"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "autoflake>=2.3.1",
+    "black>=25.11.0",
+    "daytona>=0.115.0",
+    "deepagents>=0.2.7",
+    "deepagents-cli>=0.0.9",
+    "isort>=7.0.0",
+    "langchain>=1.0.7",
+    "langchain-openai>=1.0.3",
+    "langgraph>=1.0.3",
+    "langgraph-cli[inmem]>=0.4.7",
+    "python-dotenv>=1.2.1",
+    "sentry-sdk>=2.44.0",
+    "streamlit>=1.51.0",
+]
