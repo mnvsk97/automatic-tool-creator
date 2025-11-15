@@ -7,6 +7,7 @@ requires-python = ">=3.12"
 dependencies = [
     "autoflake>=2.3.1",
     "black>=25.11.0",
+    "claude-agent-sdk>=0.1.6",
     "daytona>=0.115.0",
     "deepagents>=0.2.7",
     "deepagents-cli>=0.0.9",
