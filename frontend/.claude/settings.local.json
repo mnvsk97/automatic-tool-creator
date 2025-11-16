@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(claude --version)",
+      "Bash(npm outdated:*)",
+      "Bash(npm ls:*)",
+      "Bash(brew list:*)",
+      "Read(//opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/**)",
+      "Bash(/opt/homebrew/bin/claude:*)",
+      "Skill(frontend-design)",
+      "Bash(npm run dev:*)",
+      "WebFetch(domain:github.com)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
